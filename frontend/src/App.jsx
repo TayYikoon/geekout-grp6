@@ -1,43 +1,38 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import './style.css';
-import data from "./TemplateData.json";
 import ButtonAppBar from "./components/AppBar";
+import Home from "./Home";
+import Database from "./Database";
+import WorksheetGen from "./WorksheetGen";
+import ClassList from "./ClassList";
+import PersonalisedWorksheets from "./PersonalisedWorksheets";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <Home setCurrentPage={setCurrentPage} />;
+      case 'database':
+        return <Database setCurrentPage={setCurrentPage} />;
+      case 'worksheetGen':
+        return <WorksheetGen setCurrentPage={setCurrentPage} />;
+      case 'classList':
+        return <ClassList setCurrentPage={setCurrentPage} />;
+      case 'personalisedWorksheets':
+        return <PersonalisedWorksheets setCurrentPage={setCurrentPage} />;
+      default:
+        return <Home setCurrentPage={setCurrentPage} />;
+    }
+  };
+
   return (
     <>
-      <ButtonAppBar/> 
-      <div className="templateContainer">
-        <div className="searchInput_Container">
-          <input id="searchInput" type="text" placeholder="Search here..." onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }} />
-        </div>
-        <div className="template_Container">
-          {
-            data 
-              .filter((val) => {
-                if(searchTerm == ""){
-                  return val;
-                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
-                  return val;
-                }
-              })
-              .map((val) => {
-                return(
-                  <div className="template" key={val.id}>
-                      <img src={val.image} alt="" />
-                      <h3>{val.title}</h3>
-                      <p className="price">{val.who}</p>
-                  </div> 
-                )
-              })
-          }
-        </div>
-      </div>
+      <ButtonAppBar setCurrentPage={setCurrentPage} />
+      {renderPage()}
     </>
-  )
+  );
 }
 
 export default App;

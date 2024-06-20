@@ -18,7 +18,9 @@ app.use(express.urlencoded({ extended: false }));
 // SETUP ROUTES
 //////////////////////////////////////////////////////
 const mainRoutes = require('./routes/mainRoutes');
+const materialsRoutes = require('./routes/materialsRoutes');
 app.use("/api", mainRoutes);
+app.use("/api/materials", materialsRoutes);
 
 //////////////////////////////////////////////////////
 // SETUP STATIC FILES

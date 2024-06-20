@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar({ setCurrentPage }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: '#4BC594' }}>
@@ -24,6 +24,9 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             AdaptEd
           </Typography>
+          <Button color="inherit" onClick={() => setCurrentPage('home')}>Home</Button>
+          <Button color="inherit" onClick={() => setCurrentPage('database')}>Database</Button>
+          <Button color="inherit" onClick={() => setCurrentPage('worksheetGen')}>Worksheet Gen</Button>
           <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>

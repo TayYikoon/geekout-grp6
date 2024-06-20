@@ -2,10 +2,8 @@
 // REQUIRE MODULES
 //////////////////////////////////////////////////////
 const express = require('express');
-
+const multer = require('multer');
 const controller = require('../controllers/materialsController');
-
-const multer = require('multer')
 
 const upload = multer();
 
@@ -17,8 +15,9 @@ const router = express.Router();
 //////////////////////////////////////////////////////
 // DEFINE ROUTES
 //////////////////////////////////////////////////////
-
-router.post('/', upload.single('pdf'), controller.createMaterial);
+router.post('/', upload.single('pdf'), controller.uploadMaterial);
+router.get('/', controller.getMaterials);
+router.delete('/:id', controller.deleteMaterial);
 
 //////////////////////////////////////////////////////
 // EXPORT ROUTER

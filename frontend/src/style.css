@@ -1,32 +1,197 @@
-body{
-    background-color: #FFFFFF;
-}
-.templateContainer{
-    margin: 5% 0;
-}
-.templateContainer > .searchInput_Container{
+/* General Styles */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  /* Home Styles */
+  .homeContainer {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .buttonContainer button {
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #6fcf97;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Database Styles */
+  .databaseContainer {
+    padding: 20px;
+  }
+  
+  .databaseContainer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .databaseContainer li {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-.templateContainer > .searchInput_Container input{
-    width: 50%;
-    padding: 10px;
-    outline: none;
-    background-color: #F5F5F5;
-}
-.templateContainer .template_Container{
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .databaseContainer button {
+    background-color: #eb5757;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* WorksheetGen Styles */
+  .worksheetGenContainer {
     display: flex;
+    padding: 20px;
+  }
+  
+  .worksheetGenContainer .templates {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .worksheetGenContainer .recentFiles {
+    flex: 1;
+  }
+  
+  .worksheetGenContainer button {
+    background-color: #6fcf97;
+    color: white;
+    border: none;
+    border-radiusSorry for the abrupt interruption. Let me continue the `style.css` file and complete the component integration.
+  
+  ### Complete `style.css`
+  
+  ```css
+  /* General Styles */
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  /* Home Styles */
+  .homeContainer {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .buttonContainer button {
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #6fcf97;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Database Styles */
+  .databaseContainer {
+    padding: 20px;
+  }
+  
+  .databaseContainer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .databaseContainer li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .databaseContainer button {
+    background-color: #eb5757;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* WorksheetGen Styles */
+  .worksheetGenContainer {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .worksheetGenContainer .templates {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .worksheetGenContainer .recentFiles {
+    flex: 1;
+  }
+  
+  .worksheetGenContainer button {
+    background-color: #6fcf97;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* ClassList Styles */
+  .classListContainer {
+    padding: 20px;
+  }
+  
+  .classListContainer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .classListContainer li {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-.templateContainer .template_Container .template{
-    background-color: #D9D9D9;
-    margin: 30px;
-    padding: 0px 20px;
-}
-.templateContainer .template_Container .template img{
-    height: 250px;
-}
+    margin: 10px 0;
+  }
+  
+  /* PersonalisedWorksheets Styles */
+  .personalisedWorksheetsContainer {
+    padding: 20px;
+  }
+  
+  .personalisedWorksheetsContainer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .personalisedWorksheetsContainer li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
