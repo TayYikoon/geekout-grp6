@@ -30,7 +30,7 @@ bcrypt.hash('1234', saltRounds, (error, hash) => {
     CREATE TABLE Teachers (
         id INT PRIMARY KEY AUTO_INCREMENT,
         name TEXT NOT NULL,
-        email TEXT NOT NULL,
+        email VARCHAR(255) NOT NULL,
         password_hash TEXT NOT NULL,
         subject TEXT,
         class TEXT,
@@ -40,7 +40,7 @@ bcrypt.hash('1234', saltRounds, (error, hash) => {
     CREATE TABLE Students (
         id INT PRIMARY KEY AUTO_INCREMENT,
         name TEXT NOT NULL,
-        email TEXT NOT NULL,
+        email VARCHAR(255) NOT NULL,
         class TEXT NOT NULL,
         proficiency JSON NOT NULL,
         UNIQUE (email)
