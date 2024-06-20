@@ -4,7 +4,7 @@
 const express = require('express');
 
 const teachersRoutes = require('./teachersRoutes');
-// const studentsRoutes = require('./studentsRoutes');
+const studentsRoutes = require('./studentsRoutes');
 // const materialsRoutes = require('./materialsRoutes');
 // const worksheetsRoutes = require('./worksheetsRoutes');
 const teachersController = require('../controllers/teachersController')
@@ -32,7 +32,7 @@ router.post("/register", teachersController.checkEmailExist, bcryptMiddleware.ha
 
 // Using other route modules for specific features
 router.use("/teachers", teachersRoutes);
-// router.use("/students", studentsRoutes);
+router.use("/students", studentsRoutes);
 // router.use("/materials", materialsRoutes);
 // router.use("/worksheets", worksheetsRoutes);
 
