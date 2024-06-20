@@ -19,13 +19,13 @@ bcrypt.hash('1234', saltRounds, (error, hash) => {
     console.log("Hashed password:", hash);
 
     const SQLSTATEMENT = `
+    DROP TABLE IF EXISTS worksheets;
+
+    DROP TABLE IF EXISTS materials;
+
     DROP TABLE IF EXISTS teachers;
 
     DROP TABLE IF EXISTS students;
-    
-    DROP TABLE IF EXISTS materials;
-
-    DROP TABLE IF EXISTS worksheets;
 
     CREATE TABLE Teachers (
         id INT PRIMARY KEY AUTO_INCREMENT,
@@ -42,7 +42,7 @@ bcrypt.hash('1234', saltRounds, (error, hash) => {
         name TEXT NOT NULL,
         email VARCHAR(255) NOT NULL,
         class TEXT NOT NULL,
-        proficiency JSON NOT NULL,
+        proficiency TEXT,
         UNIQUE (email)
     );
 
