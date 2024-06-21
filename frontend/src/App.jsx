@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './style.css';
-import ButtonAppBar from "./components/AppBar";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import Home from "./Home";
 import Database from "./Database";
