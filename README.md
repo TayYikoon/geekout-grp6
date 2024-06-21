@@ -6,8 +6,9 @@ React Vite MUI
 Node.js Express.js
 
 # How to Run
-to run frontend:
+To run frontend:
 ```
+cd frontend
 npm install
 npm run dev
 ```
